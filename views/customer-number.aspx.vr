@@ -20,9 +20,6 @@ BegClass views_customer_number Partial(*Yes) Access(*Public) Extends(System.Web.
 
         *This.Title = "Get customer number"
 
-        DclFld CurrentPage Type(*String) 
-        CurrentPage = (*This.Master *As MasterPageNav).ChildPage  // Gets current content page in this format: ~/views/Index.aspx
-
         DclFld CustomerNumber Type(*Integer4) 
 
         If Request['test'] <> *Nothing 
@@ -62,7 +59,6 @@ BegClass views_customer_number Partial(*Yes) Access(*Public) Extends(System.Web.
 
         Session['customer-number'] = textboxCustomerNumber.Text
         Response.Redirect('customer-form.aspx')
-
-		
 	EndSr
+
 EndClass

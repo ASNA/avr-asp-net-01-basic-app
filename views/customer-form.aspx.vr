@@ -48,7 +48,7 @@ BegClass CustomerForm Partial(*Yes) Access(*Public) Extends(System.Web.UI.Page)
     BegSr Page_Load Access(*Private) Event(*This.Load)
         DclSrParm sender Type(*Object)
         DclSrParm e Type(System.EventArgs)
-                       
+                      
         OpenData()                       
 
         //CMCustNo = Session["customer-number"].ToString()
